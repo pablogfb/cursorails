@@ -1,0 +1,26 @@
+<html>
+	<body>
+		<h1>Introduza sus datos</h1>
+		<form action="/pedido/nuevoPedido" method="get"><br />
+			Nombre:
+			<input type="text"name="nombre"/><br />
+			Dirección: 
+			<input type="text" name="direccion" /><br />
+			Tamaño:
+			<select name="tamano">
+				<option value="pequeña">pequeña</option>
+				<option value="mediana">mediana</option>
+				<option value="grande">grande</option>
+			</select><br />
+			
+			<input type="checkbox" name="ingrediente[]" value="queso"/>Queso <br>
+			<input type="checkbox" name="ingrediente[]" value="tomate"/>Tomate <br>
+			<input type="checkbox" name="ingrediente[]" value="anchoas"/>Anchoas <br>	
+			<input type="checkbox" name="ingrediente[]" value="alcaparras"/>Alcaparras <br>	
+			<input type="checkbox" name="ingrediente[]" value="Jamon"/>Jamon <br>	
+			<input type="checkbox" name="ingrediente[]" value="pollo"/>Pollo <br>			
+			<input type="submit" value="Pulsa"/>
+		</form>
+	</body>
+</html>
+
