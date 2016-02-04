@@ -1,0 +1,7 @@
+<h1>TablaMultiplicar#mostrar</h1>
+<p>Find me in app/views/tabla_multiplicar/mostrar.html.erb</p>
+
+<form action= "/TablaMultiplicar/mostrar">
+	<input type="number" name="numero1">
+	<input type="submit" value="Mostrar tabla">
+</form>

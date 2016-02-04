@@ -4,7 +4,7 @@ class AltaUsuarioController < ApplicationController
     resultado= Altausuario.alta params[:nombre],params[:pass]
     
     if resultado == false
-      render "error"
+      render error
     end   
 =begin
     usuarios=Dao.lista
