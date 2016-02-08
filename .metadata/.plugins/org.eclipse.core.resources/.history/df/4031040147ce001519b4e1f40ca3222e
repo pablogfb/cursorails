@@ -1,0 +1,18 @@
+#require_relative "../models/agenda.rb"
+
+class AltaUsuarioController < ApplicationController
+
+  def index
+     @agen = Listin.new
+ 
+       if params[:boton] == "Alta"
+         puts "Estamos aqui"
+         @agen.alta params[:nombre],params[:apellidos],params[:edad],params[:telefono]
+       end
+
+    
+
+    @listausuarios= @agen.lista
+  end
+  
+end

@@ -1,0 +1,13 @@
+class Dao
+  
+  @@listaUsuarios= []
+  
+  def self.alta usuario
+    @@listaUsuarios << usuario
+  end
+  
+  def self.listar
+    @@listaUsuarios
+  end
+  
+end

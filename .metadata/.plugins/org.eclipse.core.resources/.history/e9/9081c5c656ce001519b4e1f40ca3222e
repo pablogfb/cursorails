@@ -1,0 +1,16 @@
+class Dao
+  
+  @@listaUsuarios= []
+  @@contador=0
+  
+  def self.alta usuario
+    @@contador+=1
+    usuario.id= @@contador
+    @@listaUsuarios << usuario
+  end
+  
+  def self.listar
+    @@listaUsuarios
+  end
+  
+end

@@ -1,0 +1,14 @@
+			
+		<form action="/AltaUsuario/index" method="get"><br />
+			Nombre:
+			<input type="text"name="nombre" value="<%=@usuario.nombre%>"/><br />
+			Apellidos:
+			<input type="text" name="apellidos" value="<%=@usuario.apellidos%>"/><br />
+			Edad:
+			<input type="text" name="edad" value="<%=@usuario.edad%>"/><br />
+			Telefono:
+			<input type="text" name="telefono" value="<%=@usuario.telefono%>"/><br />	
+			id:
+			<input type="hidden" name="id" value="<%=@usuario.id%>"/><br />	
+			<input type="submit" name="boton" value="modificar"/><br />
+		</form>

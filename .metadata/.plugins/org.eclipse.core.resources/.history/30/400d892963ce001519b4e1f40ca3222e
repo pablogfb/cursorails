@@ -1,0 +1,10 @@
+
+<h3>Los detalles del usuario son:</h3>
+
+Nombre: <%=@detalle.nombre%><br>
+Apellidos: <%=@detalle.apellidos%><br>
+Edad: <%=@detalle.edad%><br>
+Teléfono: <%=@detalle.telefono%><br>
+<a href=/AltaUsuario/borrar?id=<%=usuario.id%>>Borrar </a><br>
+
+<a href=/AltaUsuario/index>Volver</a>

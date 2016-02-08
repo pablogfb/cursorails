@@ -1,0 +1,13 @@
+class AltaUsuarioController < ApplicationController
+  
+
+  
+  def index
+    @agen = Agenda.new
+    if params[:nombre] !=nil
+    @agen.alta params[:nombre],params[:apellidos],params[:edad],params[:telefono]
+    end
+    @listausuarios= @agen.lista
+  end
+  
+end

@@ -1,0 +1,33 @@
+class Dao
+=begin 
+  @@listaUsuarios= []
+  @@contador=0
+  
+  def self.alta usuario
+    @@contador+=1
+    usuario.id= @@contador
+    @@listaUsuarios << usuario
+  end
+  
+  def self.listar
+    @@listaUsuarios
+  end
+=end 
+@@clientesHash={}
+@@id=0
+
+def sef.alta usuario
+usuario.id=@@id
+@@clientesHash[@@id]=usuario
+@@id+=1
+end
+
+def self.listar
+@@clientesHash.values
+end
+
+def self.getClientesById id
+  @@clientesHash[id]
+end
+
+end

@@ -1,0 +1,12 @@
+class Usuario
+  
+  attr_reader :nombre,:apellidos,:edad,:telefono
+  
+  def initialize nombre,apellidos,edad,telefono
+    @nombre=nombre
+    @apellidos=apellidos
+    @edad=edad
+    @telefono=telefono
+  end
+  
+end

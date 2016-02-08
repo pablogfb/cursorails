@@ -1,0 +1,12 @@
+class Agenda
+  
+  def alta nombre,apellidos,edad,telefono
+    usuario1= Usuario.new nombre,apellidos,edad,telefono
+    Dao.alta usuario1
+  end
+  
+  def lista
+    @lista = Dao.listar
+  end
+  
+end
