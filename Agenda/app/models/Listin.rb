@@ -1,4 +1,5 @@
 class Listin
+  
   def initialize
     puts "inicializando"
   end
