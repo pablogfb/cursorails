@@ -1,0 +1,6 @@
+<%=form_tag ({controller: "ProcesarFormularios",action: "primera_pagina"},method: "get") do %>
+
+
+<%= text_field_tag(:nombre)%>
+<%=label_tag(:n)%>
+<%end%>

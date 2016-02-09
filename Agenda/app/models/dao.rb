@@ -35,8 +35,8 @@ def self.getClientesById id
   @@clientesHash[id]
 end
 
-def self.modificarId id,usuario
-  @@clientesHash[id]=usuario
+def self.modificarId usuario
+  @@clientesHash[usuario.id]=usuario
 end
 
 end

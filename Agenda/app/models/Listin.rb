@@ -25,7 +25,7 @@ class Listin
   def modificar id,nombre,apellidos,edad,telefono
     usuario1= Usuario.new nombre,apellidos,edad,telefono
     usuario1.id=id
-    Dao.modificarId id,usuario1
+    Dao.modificarId usuario1
   end
   
 end
