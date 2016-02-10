@@ -1,0 +1,10 @@
+class RedireccionController < ApplicationController
+  def index
+  end
+
+  def mostrar
+  end
+
+  def irA
+  end
+end

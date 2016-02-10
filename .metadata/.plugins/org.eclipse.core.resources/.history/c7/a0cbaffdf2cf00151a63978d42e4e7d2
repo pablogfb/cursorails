@@ -1,0 +1,7 @@
+<%=form_tag({controller: "redireccion",action: '<%=params[:accion]%>}',method: "get") do %>
+
+<%=label_tag(<%=params:accion%>,<%=params:accion%>)%>
+<%= text_field_tag(<%=params:accion%>)%><br>
+<%= submit_tag(<%=params:accion%>)%>
+
+<%end%>

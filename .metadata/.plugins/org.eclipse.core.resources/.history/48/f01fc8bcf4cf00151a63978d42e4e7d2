@@ -1,0 +1,11 @@
+class RedireccionController < ApplicationController
+  def index
+  end
+
+  def mostrar
+    @variable= params[:mostrar]
+  end
+
+  def irA
+  end
+end

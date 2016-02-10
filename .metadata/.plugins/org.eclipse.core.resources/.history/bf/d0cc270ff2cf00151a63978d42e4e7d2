@@ -1,0 +1,7 @@
+<%=form_tag({controller: "redireccion",action: <%=params[:accion]},method: "get") do %>
+
+<%=label_tag(:nombre,"Indica tu nombre: ")%>
+<%= text_field_tag(:nombre)%><br>
+<%= submit_tag("Enviar info")%>
+
+<%end%>

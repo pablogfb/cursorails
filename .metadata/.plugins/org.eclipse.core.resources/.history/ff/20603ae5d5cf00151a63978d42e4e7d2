@@ -1,0 +1,22 @@
+
+<h3 style="color: red">Este es el body</h1>
+<%=render "template_prueba"%>
+<%=render "template_prueba"%>
+
+<%
+
+variable_enlace="http://www.google.es"
+variable_mostrar="Google"
+
+%>
+<br>
+<%=render partial: "template_dinamico", locals:{direccionWeb: variable_enlace,direccionMostrar:variable_mostrar}
+
+%><br>
+
+<%=render partial: "template_dinamico", locals:{direccionWeb: @enlace,direccionMostrar:@literal}
+
+%><br>
+
+
+

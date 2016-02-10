@@ -1,0 +1,3 @@
+<h1>Los datos del libro <%=@libro.id%></h1>
+<h3>Título: <%=@libro.titulo%></h3>
+<h3>Título: <%=@libro.autor%></h3>
