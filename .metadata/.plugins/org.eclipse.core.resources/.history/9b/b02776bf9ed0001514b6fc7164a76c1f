@@ -1,0 +1,13 @@
+<table>
+	<tr>
+		<th>Titulo</th>
+		<th>Comentarios</th>
+	</tr>
+	<% for registro in @registros do
+	%>
+	<tr>
+		<td><%=registro.titulo%></td>
+		<td><%=registro.comentarios%></td>
+	</tr>	
+	<%end>%>	
+</table>

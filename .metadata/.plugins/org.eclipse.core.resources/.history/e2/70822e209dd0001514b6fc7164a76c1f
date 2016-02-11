@@ -1,0 +1,34 @@
+class RegistroController < ApplicationController
+  
+  def index
+    #registro.all nos devuelve todos los registros de la BD en un array
+    #Al heredar de ActiveRecord estarán autmáticamente implementados sus accesos
+    @registros= Registro.all
+    if @registros.size >0
+      puts @registros[0].titulo
+      puts @registros.first.id
+      puts @registros.last.id
+    end
+  end
+  
+  
+  def create
+    parametrosHash={}
+    parametrosHash[:titulo]=params[:titulo]
+    parametrosHash[:comentarios]=params[:comentarios]
+    Registro.create()
+  end
+  
+  def delete
+    
+  end
+  
+  def read
+    
+  end
+  
+  def update
+    
+  end
+  
+end
