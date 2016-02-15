@@ -49,7 +49,7 @@ class DiscoController < ApplicationController
   end
   
   def delete
-    Disco.delete params[:id]
+    Disco.delete params[:id].to_i
     index
     render :index
   end
@@ -75,18 +75,5 @@ class DiscoController < ApplicationController
   
   def resultado
     
-  end
-  #Manera alternativa de hacer el formulario
-  def new
-    @disco=Disco.new
-  end
-  
-  def generate
-    Disco.create(ad_params)
-    index
-    render :index
-  end
-  def ad_params
-      params.require(:disco).permit(:nombre, :artista, :anio)
   end
 end

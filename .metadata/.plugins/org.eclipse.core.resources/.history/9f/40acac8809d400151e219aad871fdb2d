@@ -76,17 +76,16 @@ class DiscoController < ApplicationController
   def resultado
     
   end
-  #Manera alternativa de hacer el formulario
+  #manera alternativa de hacer el formulario
   def new
     @disco=Disco.new
   end
   
   def generate
-    Disco.create(ad_params)
+    hash=params[:disco]
+    hash[:anio]=hash[:anio].to_i
+    Disco.create hash
     index
     render :index
-  end
-  def ad_params
-      params.require(:disco).permit(:nombre, :artista, :anio)
   end
 end

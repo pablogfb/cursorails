@@ -1,4 +1,0 @@
-<%=detalle.nombre%>
-<%=detalle.apellidos%>
-<%=detalle.edad%>
-<%=detalle.telefono%>

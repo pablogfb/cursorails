@@ -18,5 +18,4 @@ class Disco < ActiveRecord::Base
 def to_s
   puts "#{nombre},#{artista},#{anio}"
 end
-
 end

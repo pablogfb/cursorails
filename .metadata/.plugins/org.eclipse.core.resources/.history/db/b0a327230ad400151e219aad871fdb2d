@@ -19,7 +19,7 @@
 	<%end%>
 
 </table><br>
-	<%= submit_tag("Borrar seleccionados")%>
+	<%= submit_tag("Enviar")%>
 <%end%><br>
 -------------------------------------------------------
 <h3>Dar de alta un nuevo disco</h3>
@@ -36,4 +36,3 @@
 
 <a href="/disco/search?type=artista">Búsqueda por artista</a><br>
 <a href="/disco/search?type=anio">Búsqueda por año</a><br>
-<a href="/disco/new">Otro tipo de alta</a><br>
