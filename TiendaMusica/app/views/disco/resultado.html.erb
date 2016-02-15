@@ -1,0 +1,15 @@
+	<table>
+		<tr>
+			<th>Nombre</th>
+			<th>Artista</th>
+			<th>Año</th>
+		</tr>
+	<% for registro in @discos do%>
+	
+		<tr>
+			<td><%=registro.nombre%></td>
+			<td><%=registro.artista%></td>
+			<td><%=registro.anio%></td>
+		</tr>
+	<%end%>
+	</table>

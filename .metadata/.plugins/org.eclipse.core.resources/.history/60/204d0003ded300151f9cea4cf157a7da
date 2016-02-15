@@ -1,0 +1,7 @@
+class Disco < ActiveRecord::Base
+  
+  validates_presence_of :nombre, message: 'Nombre vacío'
+  validates_presence_of :artista, message: 'Artista vacío'
+  validates_presence_of :anio, message: 'Año vacío'
+
+end

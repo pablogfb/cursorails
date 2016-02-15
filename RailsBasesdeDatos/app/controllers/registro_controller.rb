@@ -18,7 +18,12 @@ class RegistroController < ApplicationController
     parametrosHash[:titulo]=params[:titulo]
     parametrosHash[:comentarios]=params[:comentarios]
     #Pasamos el hash
-    Registro.create(parametrosHash)
+    @registro=Registro.create(parametrosHash)
+    #Registro.create puede devolverme errores en caso de que haya habido un error al insertar
+    if @registro.errors.any?
+      puts "BDERROR: Error"
+    end
+      
     #Cargamos index y lo renderizamos
     index
     render 'index'
@@ -42,12 +47,40 @@ class RegistroController < ApplicationController
   end
   
   def read
-    @registro=Registro.where(:id =>params[:id].to_i)
-    @registro=@registro.first
+    @registro = Registro.find params[:id].to_i
+    
+    #También:
+    #@registro=Registro.where(:id =>params[:id].to_i)
+    #@registro=@registro.first
   end
   
   def update
-    
+    id=params[:id].to_i
+    titulo=params[:titulo]
+    comentarios=params[:comentarios]
+    parametrosHash={}
+    parametrosHash[:titulo]=titulo
+    parametrosHash[:comentarios]=comentarios
+    registro= Registro.find id
+    update = registro.update_attributes(parametrosHash)
+     #contiene un boolean  de si ha ido bien o no
+    #registro contiene el Activerecord con los posibles errores
+    if update
+      puts 'Registro actualizado'
+      index
+      render 'index'
+    else
+      puts 'Registro no actualizado'
+      read
+      render 'read'
+    end
   end
   
+  
+  def search_comentario
+    comentarios = params[:comentarios]
+    @registrosEncontrados=Registro.where(:comentarios => comentarios)
+    render :busqueda
+    
+  end
 end

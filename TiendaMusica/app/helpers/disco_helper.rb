@@ -1,0 +1,2 @@
+module DiscoHelper
+end

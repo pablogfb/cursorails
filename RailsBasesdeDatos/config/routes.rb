@@ -1,6 +1,14 @@
 Rails.application.routes.draw do
   
+  
+  
+  get 'registro/delete'
+  get 'registro/read'
+  get 'registro/update'
   get ':controller(/:action(/:id(.:format)))'
+  get 'registro/update'
+  get 'registro/busqueda'
+  get 'registro/search_comentario'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

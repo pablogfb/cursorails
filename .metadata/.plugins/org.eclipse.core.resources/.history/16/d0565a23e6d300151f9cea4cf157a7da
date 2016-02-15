@@ -1,0 +1,6 @@
+<%=form_tag({controller:"disco",action:<%=tipo%>},method: "get") do%>
+
+
+Introduzca <%=@tipo%>: <%= text_field_tag(:dato)%><br>
+<%= submit_tag("Enviar")%>
+<%end%>

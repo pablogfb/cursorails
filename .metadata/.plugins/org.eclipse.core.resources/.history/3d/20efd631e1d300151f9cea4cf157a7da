@@ -1,0 +1,29 @@
+<table>
+	<tr>
+		<th>Nombre</th>
+		<th>Artista</th>
+		<th>Año</th>
+	</tr>
+	<% for registro in @listado do
+	%>
+	<tr>
+		<td><%=registro.nombre%></td>
+		<td><%=registro.artista%></td>
+		<td><%=registro.anio%></td>
+		<td><a href="/disco/delete?id=<%=registro.id%>">Borrar</a></td>
+		<td><a href="/disco/read?id=<%=registro.id%>">Modificar</a></td>
+	</tr>	
+	<%end%>	
+</table><br>
+-------------------------------------------------------
+
+<%=form_tag({controller:"disco",action:"create"},method: "get") do%>
+
+<%=label_tag(:nombre,"Nombre: ")%>
+<%= text_field_tag(:nombre)%><br>
+<%=label_tag(:artista,"Artista:  ")%>
+<%= text_field_tag(:artista)%><br>
+<%=label_tag(:anio,"Año:  ")%>
+<%= text_field_tag(:anio)%><br>
+<%= submit_tag("Enviar")%>
+<%end%>

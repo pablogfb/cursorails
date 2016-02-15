@@ -1,0 +1,7 @@
+class DiscoController < ApplicationController
+  
+  def index
+    @listado=Disco.all
+  end
+  
+end

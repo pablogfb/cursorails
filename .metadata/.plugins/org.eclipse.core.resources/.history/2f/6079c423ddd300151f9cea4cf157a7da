@@ -1,0 +1,10 @@
+class DiscoController < ApplicationController
+  def nombre:string
+  end
+
+  def artista:string
+  end
+
+  def anio:integer
+  end
+end

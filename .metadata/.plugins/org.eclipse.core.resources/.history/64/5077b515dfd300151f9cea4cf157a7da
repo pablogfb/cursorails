@@ -1,0 +1,25 @@
+<table>
+	<tr>
+		<th>Titulo</th>
+		<th>Comentarios</th>
+	</tr>
+	<% for registro in @registros do
+	%>
+	<tr>
+		<td><%=@listado.nombre%></td>
+		<td><%=@listado.artista%></td>
+		<td><%=@listado.anio%></td>
+		<td><a href="/registro/delete?id=<%=@listado.id%>">Borrar</a></td>
+		<td><a href="/registro/read?id=<%=@listado.id%>">Modificar</a></td>
+	</tr>	
+	<%end%>	
+</table>
+
+<%=form_tag({controller:"registro",action:"create"},method: "get") do%>
+
+<%=label_tag(:titulo,"Título: ")%>
+<%= text_field_tag(:titulo)%><br><br>
+<%=label_tag(:comentarios,"Comentarios:  ")%>
+<%= text_field_tag(:comentarios)%><br><br>
+<%= submit_tag("Enviar")%>
+<%end%>

@@ -1,0 +1,13 @@
+
+
+<%=form_tag({controller:"disco",action:"update"},method: "get") do%>
+
+<%=label_tag(:nombre,"Nombre: ")%>
+<%= text_field_tag(:nombre,@disco.nombre)%><br>
+<%=label_tag(:artista,"Artista:  ")%>
+<%= text_field_tag(:artista,@disco.artista)%><br>
+<%=label_tag(:anio,"Año:  ")%>
+<%= text_field_tag(:anio,@disco.anio)%><br>
+<%= hidden_field_tag(:id,@disco.id)%><br>
+<%= submit_tag("Enviar")%>
+<%end%>
