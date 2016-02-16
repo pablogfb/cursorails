@@ -1,0 +1,6 @@
+<%= form_for @disco, url: {action: "generate"} do |f| %>
+  Nombre: <%= f.text_field :nombre %>
+  Artista: <%= f.text_field :artista%>
+  Año: <%= f.number_field :anio%>
+  <%= f.submit "Crear" %>
+<% end %>

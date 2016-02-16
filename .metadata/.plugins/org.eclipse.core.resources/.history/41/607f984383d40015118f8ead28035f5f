@@ -7,8 +7,6 @@
 		<th>Nombre</th>
 		<th>Artista</th>
 		<th>Año</th>
-		<th></th>
-		<th></th>
 	</tr>
 	<%clase="impar"%>
 	<% for registro in @listado do%>
@@ -20,11 +18,11 @@
 		<td><a href="/disco/read?id=<%=registro.id%>">Modificar</a></td>
 	</tr>
 		<%if clase == "par" then
-			clase="impar"
+			clase=="impar"
 		else
-			clase="par"
-		end
-	end%>
+			clase=="par"
+		end%>
+	<%end%>
 
 </table><br>
 	<%= submit_tag("Borrar seleccionados")%>
@@ -40,14 +38,6 @@
 <%=label_tag(:anio,"Año:  ")%>
 <%= text_field_tag(:anio)%><br>
 <%= submit_tag("Enviar")%>
-<%end%>
-
-<% if @disco != nil && @disco.errors.any? %>
-<ul>
-<%@disco.errors.full_messages.each do |mensaje_error|%>
-	<li><%=mensaje_error%></li>
-<%end%>
-</ul>
 <%end%>
 
 <a href="/disco/search?type=artista">Búsqueda por artista</a><br>

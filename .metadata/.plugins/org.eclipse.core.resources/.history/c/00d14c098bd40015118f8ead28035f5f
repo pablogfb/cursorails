@@ -44,7 +44,7 @@
 
 <% if @disco != nil && @disco.errors.any? %>
 <ul>
-<%@disco.errors.full_messages.each do |mensaje_error|%>
+<%@discoerrors.full_messages.each do |mensaje_error|%>
 	<li><%=mensaje_error%></li>
 <%end%>
 </ul>

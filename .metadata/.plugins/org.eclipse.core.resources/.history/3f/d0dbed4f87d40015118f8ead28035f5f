@@ -44,7 +44,7 @@ td    {
 }
 
 .impar {
-  background-color: #FFFF99;
+  background-color: #CC9933;
   color: black;
   border: 1px solid black;
    text-align: center;

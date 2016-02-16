@@ -7,10 +7,8 @@
 		<th>Nombre</th>
 		<th>Artista</th>
 		<th>Año</th>
-		<th></th>
-		<th></th>
 	</tr>
-	<%clase="impar"%>
+	<%clase="par"%>
 	<% for registro in @listado do%>
 	<tr class=<%=clase%>>
 		<td><%=registro.nombre%></td>
@@ -19,11 +17,11 @@
 		<td><%=check_box_tag("id[]", value = registro.id, checked = false)%></td>
 		<td><a href="/disco/read?id=<%=registro.id%>">Modificar</a></td>
 	</tr>
-		<%if clase == "par" then
-			clase="impar"
+		<%if clase == "par"
+			clase=="impar"
 		else
-			clase="par"
-		end
+			clase=="par"
+		end	
 	end%>
 
 </table><br>
@@ -40,14 +38,6 @@
 <%=label_tag(:anio,"Año:  ")%>
 <%= text_field_tag(:anio)%><br>
 <%= submit_tag("Enviar")%>
-<%end%>
-
-<% if @disco != nil && @disco.errors.any? %>
-<ul>
-<%@disco.errors.full_messages.each do |mensaje_error|%>
-	<li><%=mensaje_error%></li>
-<%end%>
-</ul>
 <%end%>
 
 <a href="/disco/search?type=artista">Búsqueda por artista</a><br>
