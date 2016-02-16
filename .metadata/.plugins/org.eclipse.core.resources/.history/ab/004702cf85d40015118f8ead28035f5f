@@ -11,11 +11,7 @@ form {
 }
 
 input{
-  margin: 6px
-}
-
-label {
-  
+  marggin: 12px
 }
 
 table {
@@ -37,14 +33,14 @@ td    {
 }
 
 .par {
-  background-color: #99FF99;
-  color: black;
+  background-color: #4CAF50;
+  color: white;
   border: 1px solid black;
    text-align: center;
 }
 
 .impar {
-  background-color: #FFFF99;
+  background-color: #CC9933;
   color: black;
   border: 1px solid black;
    text-align: center;
