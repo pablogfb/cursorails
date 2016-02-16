@@ -1,7 +1,0 @@
-El nombre introducido ha sido <%=params[:nombre]%><br>
-Los números que ha elegido son <%=params[:check_box_numeros]%><br>
-Le gusta? <%=params[:respuesta]%><br>
-La contreña es <%=params[:secreto]%><br>
-La fecha es <%=params[:fecha]%><br>
-El email es <%=params[:email]%><br>
-El color es <%=params[:color]%><br>

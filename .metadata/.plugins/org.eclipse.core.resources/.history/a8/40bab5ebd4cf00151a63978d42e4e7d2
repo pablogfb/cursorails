@@ -1,4 +1,0 @@
-
-<h3 style="color: red">Este es el body</h1>
-<%=render "template_prueba"%>
-<%=render "template_dinamico"%>

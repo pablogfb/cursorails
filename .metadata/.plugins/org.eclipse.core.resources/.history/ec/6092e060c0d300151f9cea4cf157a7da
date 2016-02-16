@@ -1,9 +1,0 @@
-<%=form_tag({controller:"registro",action:"update"},method: "get") do%>
-
-<%=label_tag(:titulo,"Título: ")%>
-<%= text_field_tag(:titulo,@registro.titulo)%><br><br>
-<%=label_tag(:comentarios,"Comentarios:  ")%>
-<%= text_field_tag(:comentarios,@registro.comentarios)%><br><br>
-<%= hidden_field_tag (:id,@registro.id)%>
-<%= submit_tag("Enviar")%>
-<%end%>

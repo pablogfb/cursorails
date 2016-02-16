@@ -1,1 +1,0 @@
-<h1>Los datos del libro <%=@libro.id%>
