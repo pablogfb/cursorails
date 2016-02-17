@@ -1,0 +1,68 @@
+
+<%if @modificar then
+	accion="guardar"
+	titulo=@modificar.titulo
+	autor=@modificar.autor
+	genero=@modificar.genero
+	id=@modificar.id
+	%>
+	<h3>Modificar el Libro</h3><%
+	else
+	%><h3>Dar de alta un nuevo Libro</h3><%	
+	accion="alta"
+end%>
+
+<%=form_tag({controller:"biblioteca",action:accion},method: "get") do%>
+
+<%=label_tag(:titulo,"Título: ")%>
+<%= text_field_tag(:titulo,titulo)%><br>
+<%=label_tag(:autor,"Autor:  ")%>
+<%= text_field_tag(:autor,autor)%><br>
+<%=label_tag(:genero,"Género:  ")%>
+<%= text_field_tag(:genero,genero)%><br>
+<%= hidden_field_tag(:id,id)%><br>
+<%= submit_tag(accion.capitalize)%>
+<%end%>
+
+<% if @libro != nil && @libro.errors.any? %>
+<ul>
+<%@libro.errors.full_messages.each do |mensaje_error|%>
+	<li><%=mensaje_error%></li>
+<%end%>
+</ul>
+<%end%>
+
+------------------------------------------
+<h3>Buscar un libro</h3>
+
+<%=form_tag({controller:"biblioteca",action:"listar"},method: "get") do%>
+
+	<%=label_tag(:dato,"Búsqueda ")%>
+	<%= text_field_tag(:dato)%><br>
+	<%=label_tag(:metodo,"Por: ")%>
+	<%=select_tag :metodo , options_for_select([ "titulo", "autor", "genero" ])%>
+	<%= submit_tag("Enviar")%>
+<%end%>
+<a href="/biblioteca/listartodo">Listar todos los libros registrados</a>
+
+<% if @busqueda != nil %>
+	<h3>Resultado:</h3>
+	<table>
+			<tr>
+				<th>Título</th>
+				<th>Autor</th>
+				<th>Género</th>
+				<th>Modificar</th>
+				<th>Borrar</th>
+			</tr>
+		<% for libro in @busqueda do%>
+			<tr>
+				<td><%=libro.titulo%></td>
+				<td><%=libro.autor%></td>
+				<td><%=libro.genero%></td>
+				<td><a href="/biblioteca/modificar?id=<%=libro.id%>">Cargar formulario</td>
+				<td><a href="/biblioteca/baja?id=<%=libro.id%>">Borrar</a></td>
+			</tr>
+		<%end%>
+	</table>
+<%end%>
